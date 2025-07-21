@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>لوحة المشاهير</title>
+    <link rel="icon" href="images/main-page-logo.png" type="image/x-icon" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/media.css" />
+  </head>
+
+  <body>
+    <!-- Start Preloader HTML -->
+    <div id="preloader">
+      <div class="loading-container">
+        <img src="./images/main-page-logo.png" alt="Logo" />
+      </div>
+    </div>
+    <!-- End Preloader HTML -->
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+      <button class="close-sidebar d-md-none" id="closeSidebar">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="logo"><img src="./images/logo.png" width="50%" height="65px"
+          alt="Logo" /></div>
+      <a href="#" class="active"><i
+          class="fa-solid fa-house-chimney-window mx-2"></i>الرئيسية</a>
+      <a href="#"><i class="fa-solid fa-gift mx-2"></i> كوبونات الخصم</a>
+      <a href="#"><i class="fa-solid fa-receipt mx-2"></i>عقدي مع الشركة</a>
+      <a href="#"><i class="fa-solid fa-gifts mx-2"></i>الميزات و الهدايا</a>
+      <a href="#"><i class="fa-solid fa-circle-user mx-2"></i>الملف الشخصي</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+      <!-- Top bar -->
+      <div class="top-bar">
+        <div class="container-fluid">
+          <div class="row">
+            <!-- الزر يظهر فقط على الشاشات الصغيرة -->
+            <div class="col-2 d-md-none">
+              <button class="mobile-menu-btn" id="menuToggle">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+            </div>
+
+            <!-- حقل البحث يظهر فقط على الشاشات الصغيرة -->
+            <div class="col-10 d-md-none">
+              <div class="input-group">
+                <input type="search" class="form-control"
+                  placeholder="عن ماذا تبحث ..." aria-label="Search">
+              </div>
+            </div>
+
+            <!-- نسخة حقل البحث للشاشات الكبيرة -->
+            <div class="col-md-7 d-none d-md-block">
+              <div class="input-group">
+                <input type="search" class="form-control"
+                  placeholder="عن ماذا تبحث ..." aria-label="Search">
+              </div>
+            </div>
+
+            <div class="col-md-2 col-6">
+              <div class="icons text-end">
+                <a href="#" class="notification-icon comment">
+                  <i class="fa-solid fa-comment-dots"></i>
+                  <span class="notification-badge">3</span>
+                </a>
+                <a href="#" class="notification-icon bell">
+                  <i class="fa-solid fa-bell"></i>
+                  <span class="notification-badge">5</span>
+                </a>
+                <a href="#" class="settings-icon gear">
+                  <i class="fa-solid fa-gear"></i>
+                  <span class="notification-badge">1</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-md-3 col-6">
+              <div class="dropdown text-end">
+                <img src="images/user.png" alt="User"
+                  class="user-icon dropdown-toggle" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                <button class="btn dropdown-toggle" type="button"
+                  id="userDropdown" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  مرحباً أحمد
+                </button>
+                <ul class="dropdown-menu text-end"
+                  aria-labelledby="userDropdown">
+                  <li><a class="dropdown-item" href="#">الملف الشخصي</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item text-danger" href="#">تسجيل
+                      الخروج</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- End Top bar -->
+
+      <div class="row mt-3">
+        <div class="col-md-6 col-6 text-start">
+          <h3 class="fw-bold">إحصائياتي</h3>
+        </div>
+        <div class="col-md-6 col-6 text-end">
+          <div class="dropdown text-end">
+            <button class="btn dropdown-toggle" type="button" id="userDropdown"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              جميع الإحصائيات
+            </button>
+            <ul class="dropdown-menu text-end" aria-labelledby="userDropdown">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3 col-6 my-4">
+            <div class="stats-card">
+              <div class="d-flex justify-content-between align-items-start">
+                <div class="d-flex align-items-center gap-1">
+                  <span class="growth-icon"><i
+                      class="fa-solid fa-arrow-trend-up"></i></span>
+                  <span class="percentage">8%</span>
+                </div>
+                <div class="dots">•••</div>
+
+              </div>
+              <div class="mt-4 text-start">
+                <h6 class="mb-2">إجمالي المبيعات</h6>
+                <div class="amount">+ 3000 رس</div>
+              </div>
+              <div class="ribbon"></div>
+            </div>
+          </div>
+          <div class="col-md-3 col-6 my-4">
+            <div class="stats-card yellow">
+              <div class="d-flex justify-content-between align-items-start">
+                <div class="d-flex align-items-center gap-1">
+                  <span class="growth-icon"><i
+                      class="fa-solid fa-arrow-trend-up"></i></span>
+                  <span class="percentage">8%</span>
+                </div>
+                <div class="dots">•••</div>
+
+              </div>
+              <div class="mt-4 text-start">
+                <h6 class="mb-2">إجمالي المبيعات</h6>
+                <div class="amount">+ 3000 رس</div>
+              </div>
+              <div class="ribbon"></div>
+            </div>
+          </div>
+          <div class="col-md-3 col-6 my-4">
+            <div class="stats-card">
+              <div class="d-flex justify-content-between align-items-start">
+                <div class="d-flex align-items-center gap-1">
+                  <span class="growth-icon"><i
+                      class="fa-solid fa-arrow-trend-up"></i></span>
+                  <span class="percentage">8%</span>
+                </div>
+                <div class="dots">•••</div>
+
+              </div>
+              <div class="mt-4 text-start">
+                <h6 class="mb-2">إجمالي المبيعات</h6>
+                <div class="amount">+ 3000 رس</div>
+              </div>
+              <div class="ribbon"></div>
+            </div>
+          </div>
+          <div class="col-md-3 col-6 my-4">
+            <div class="stats-card yellow">
+              <div class="d-flex justify-content-between align-items-start">
+                <div class="d-flex align-items-center gap-1">
+                  <span class="growth-icon"><i
+                      class="fa-solid fa-arrow-trend-up"></i></span>
+                  <span class="percentage">8%</span>
+                </div>
+                <div class="dots">•••</div>
+
+              </div>
+              <div class="mt-4 text-start">
+                <h6 class="mb-2">إجمالي المبيعات</h6>
+                <div class="amount">+ 3000 رس</div>
+              </div>
+              <div class="ribbon"></div>
+            </div>
+          </div>
+          <div class="col-md-3 col-6 my-4">
+            <div class="stats-card yellow">
+              <div class="d-flex justify-content-between align-items-start">
+                <div class="d-flex align-items-center gap-1">
+                  <span class="growth-icon"><i
+                      class="fa-solid fa-arrow-trend-up"></i></span>
+                  <span class="percentage">8%</span>
+                </div>
+                <div class="dots">•••</div>
+
+              </div>
+              <div class="mt-4 text-start">
+                <h6 class="mb-2">إجمالي المبيعات</h6>
+                <div class="amount">+ 3000 رس</div>
+              </div>
+              <div class="ribbon"></div>
+            </div>
+          </div>
+          <div class="col-md-3 col-6 my-4">
+            <div class="stats-card">
+              <div class="d-flex justify-content-between align-items-start">
+                <div class="d-flex align-items-center gap-1">
+                  <span class="growth-icon"><i
+                      class="fa-solid fa-arrow-trend-up"></i></span>
+                  <span class="percentage">8%</span>
+                </div>
+                <div class="dots">•••</div>
+
+              </div>
+              <div class="mt-4 text-start">
+                <h6 class="mb-2">إجمالي المبيعات</h6>
+                <div class="amount">+ 3000 رس</div>
+              </div>
+              <div class="ribbon"></div>
+            </div>
+          </div>
+          <div class="col-md-3 col-6 my-4">
+            <div class="stats-card yellow">
+              <div class="d-flex justify-content-between align-items-start">
+                <div class="d-flex align-items-center gap-1">
+                  <span class="growth-icon"><i
+                      class="fa-solid fa-arrow-trend-up"></i></span>
+                  <span class="percentage">8%</span>
+                </div>
+                <div class="dots">•••</div>
+
+              </div>
+              <div class="mt-4 text-start">
+                <h6 class="mb-2">إجمالي المبيعات</h6>
+                <div class="amount">+ 3000 رس</div>
+              </div>
+              <div class="ribbon"></div>
+            </div>
+          </div>
+          <div class="col-md-3 col-6 my-4">
+            <div class="stats-card">
+              <div class="d-flex justify-content-between align-items-start">
+                <div class="d-flex align-items-center gap-1">
+                  <span class="growth-icon"><i
+                      class="fa-solid fa-arrow-trend-up"></i></span>
+                  <span class="percentage">8%</span>
+                </div>
+                <div class="dots">•••</div>
+
+              </div>
+              <div class="mt-4 text-start">
+                <h6 class="mb-2">إجمالي المبيعات</h6>
+                <div class="amount">+ 3000 رس</div>
+              </div>
+              <div class="ribbon"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container mt-5" dir="rtl">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="mb-0">إجمالي الحجوزات</h5>
+            <select class="form-select w-auto" style="min-width: 120px;">
+              <option selected>سنة 2025</option>
+              <option>2024</option>
+              <option>2023</option>
+            </select>
+          </div>
+
+          <div style="height: 360px;">
+            <canvas id="bookingsChart"></canvas>
+          </div>
+        </div>
+
+        <div class="container mt-5" dir="rtl">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="mb-0">إجمالي الأرباح</h5>
+            <select class="form-select w-auto" style="min-width: 120px;">
+              <option selected>سنة 2025</option>
+              <option>2024</option>
+              <option>2023</option>
+            </select>
+          </div>
+
+          <div style="height: 300px;">
+            <canvas id="profitChart"></canvas>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="whatsapp-float d-flex">
+        <a href="https://wa.me/+966920029449" target="_blank">
+          <img src="images/whatsapp.png" alt="WhatsApp" />
+        </a>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script>
+        // Bar Chart
+        const ctx1 = document.getElementById("bookingsChart").getContext("2d");
+
+        new Chart(ctx1, {
+          type: "bar",
+          data: {
+            labels: [
+              "شهر 12", "شهر 11", "شهر 10", "شهر 9", "شهر 8", "شهر 7",
+              "شهر 6", "شهر 5", "شهر 4", "شهر 3", "شهر 2", "شهر 1"
+            ],
+            datasets: [
+              {
+                label: "حجوزات فنادق",
+                backgroundColor: "#008066",
+                data: [80, 90, 70, 85, 75, 100, 95, 90, 80, 60, 55, 70],
+                barThickness: 14
+              },
+              {
+                label: "حجوزات طيران",
+                backgroundColor: "#757575",
+                data: [60, 70, 60, 65, 55, 85, 80, 75, 70, 50, 45, 60],
+                barThickness: 14
+              },
+              {
+                label: "حجوزات خدمات",
+                backgroundColor: "#c19617",
+                data: [40, 50, 45, 55, 50, 70, 65, 60, 50, 40, 35, 45],
+                barThickness: 14
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: {
+                position: "top",
+                labels: {
+                  usePointStyle: true,
+                  font: { family: "Tahoma" }
+                }
+              },
+              tooltip: {
+                rtl: true,
+                bodyAlign: "right",
+                titleAlign: "right"
+              }
+            },
+            scales: {
+              x: {
+                grid: {
+                  display: true,
+                  color: "#e0e0e0",
+                  borderWidth: 1
+                },
+                ticks: {
+                  font: { family: "Tahoma" },
+                  color: "#000"
+                }
+              },
+              y: {
+                beginAtZero: true,
+                ticks: {
+                  stepSize: 20,
+                  font: { family: "Tahoma" },
+                  color: "#000"
+                },
+                grid: {
+                  color: "#f0f0f0"
+                }
+              }
+            }
+          }
+        });
+
+      </script>
+
+      <script>
+        // Line Chart
+        const ctx2 = document.getElementById("profitChart").getContext("2d");
+
+        const gradient = ctx2.createLinearGradient(0, 0, 0, 300);
+        gradient.addColorStop(0, 'rgba(0, 128, 102, 0.2)');
+        gradient.addColorStop(1, 'rgba(0, 128, 102, 0)');
+
+        new Chart(ctx2, {
+          type: "line",
+          data: {
+            labels: [
+              "شهر 12", "شهر 11", "شهر 10", "شهر 9", "شهر 8", "شهر 7",
+              "شهر 6", "شهر 5", "شهر 4", "شهر 3", "شهر 2", "شهر 1"
+            ],
+            datasets: [{
+              label: "الأرباح",
+              data: [60, 65, 70, 40, 95, 55, 50, 40, 75, 85, 80, 82],
+              fill: true,
+              backgroundColor: gradient,
+              borderColor: "#008066",
+              tension: 0.4,
+              pointRadius: function(ctx) {
+                return ctx.dataIndex === 8 ? 6 : 0;
+              },
+              pointBackgroundColor: "#fff",
+              pointBorderColor: "#008066",
+              pointBorderWidth: 2
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                rtl: true,
+                bodyAlign: "right",
+                titleAlign: "right"
+              }
+            },
+            scales: {
+              x: {
+                grid: { display: false },
+                ticks: {
+                  font: { family: "Tahoma" },
+                  color: "#000"
+                }
+              },
+              y: {
+                beginAtZero: true,
+                grid: {
+                  color: "#f0f0f0"
+                },
+                ticks: {
+                  font: { family: "Tahoma" },
+                  color: "#000"
+                }
+              }
+            }
+          }
+        });
+
+      </script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="./js/jquery.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+      <script src="js/swiper-bundle.min.js"></script>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+      <script src="./js/main.js"></script>
+      <script>
+        $(document).ready(function(){
+            // Check if URL has a hash and scroll to that section
+            if (window.location.hash) {
+                var hash = window.location.hash;
+                if ($(hash).length) {
+                    $("html, body").animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800);
+                }
+            }
+        });
+     
+      </script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const menuToggle = document.getElementById("menuToggle");
+          const sidebar = document.getElementById("sidebar");
+          const closeBtn = document.getElementById("closeSidebar");
+
+          menuToggle.addEventListener("click", function () {
+            sidebar.classList.add("open");
+            menuToggle.classList.add("d-none"); // إخفاء الزر عند الفتح
+          });
+
+          closeBtn.addEventListener("click", function () {
+            sidebar.classList.remove("open");
+            menuToggle.classList.remove("d-none"); // إظهاره عند الإغلاق
+          });
+
+          // إغلاق عند الضغط خارج القائمة
+          document.addEventListener("click", function (e) {
+            if (!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
+              sidebar.classList.remove("open");
+              menuToggle.classList.remove("d-none"); // إظهار الزر
+            }
+          });
+        });
+      </script>
+
+    </body>
+  </html>
