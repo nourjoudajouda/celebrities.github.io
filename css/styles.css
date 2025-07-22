@@ -104,7 +104,61 @@ a {
   }
 
 /* End whatsapp Mark */
+/* Satrt Preloader */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.loading-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 3px solid transparent;
+  border-top: 3px solid var(--main-color);
+  border-right: 3px solid var(--main-color);
+  border-radius: 50%;
+  animation: spin 1s infinite linear;
+}
+
+.loading-container img {
+  position: relative;
+  width: 80px;
+  z-index: 1031;
+}
+
+/* Spin animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* End Preloader */
 /* Top bar */
 .top-bar{
   border-bottom: 1px solid #e5e5e5;
@@ -275,5 +329,43 @@ a {
   border-radius: 6px;
   display: none;
 }
+
+/* End Home Page */
+
+/* Start Login Page */
+  .login-container {
+      height: 100vh;
+      background-color : #fafafa;
+    }
+    .social-btn {
+      width: 100%;
+      margin-bottom: 10px;
+      background: #fafafa;
+    }
+    .form-box {
+      max-width: 500px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+    .head-6{
+      color: #c19617;
+    }
+    .border-gray {
+      border-color: #6c757d !important; /* Bootstrap gray */
+      color: #6c757d !important;
+    }
+
+    .border-gray:hover {
+      background-color: #6c757d !important;
+      color: #fff !important;
+    }
+    .btn-login {
+      background-color: #008066;
+      color: #fff;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+/* End Login Page */
 
 
