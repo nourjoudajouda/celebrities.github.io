@@ -346,6 +346,7 @@ a {
       max-width: 500px;
       margin-top: 50px;
       margin-bottom: 50px;
+      border-radius:5px;
     }
     .head-6{
       color: #c19617;
@@ -365,6 +366,14 @@ a {
       border-radius: 8px;
       font-size: 16px;
       font-weight: bold;
+    }
+    .toggle-password {
+      position: absolute;
+      top: 72%;
+      transform: translateY(-50%);
+      left: 15px; /* لأنه RTL */
+      cursor: pointer;
+      color: #6c757d;
     }
 /* End Login Page */
 
