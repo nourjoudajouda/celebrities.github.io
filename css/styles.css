@@ -482,9 +482,9 @@ table.dataTable th {
   border-bottom: 1px solid #e5e5e5 !important;
   border-right: none !important;
 }
-table.dataTable>tbody>tr {
-    background-color: transparent;
-    line-height:3;
+table.dataTable > tbody > tr {
+  background-color: transparent;
+  line-height: 3;
 }
 .badge-status {
   padding: 5px 10px;
@@ -510,13 +510,14 @@ table.dataTable>tbody>tr {
   border: 1px solid #86e3b3;
 }
 div.dataTables_wrapper div.dataTables_filter {
-    text-align: end !important;
+  text-align: end !important;
 }
-.active>.page-link, .page-link.active {
-    z-index: 3;
-    color: var(--bs-pagination-active-color);
-    background-color: #009688;
-    border-color: #009688;
+.active > .page-link,
+.page-link.active {
+  z-index: 3;
+  color: var(--bs-pagination-active-color);
+  background-color: #009688;
+  border-color: #009688;
 }
 .paginate_button.page-item {
   border-radius: 8px;
@@ -541,14 +542,17 @@ div.dataTables_wrapper div.dataTables_filter {
 .paginate_button.page-item.active .page-link {
   color: white !important;
 }
-table.dataTable.table-striped>tbody>tr.odd>* {
-    text-align: center !important;
+table.dataTable.table-striped > tbody > tr.odd > * {
+  text-align: center !important;
 }
-table.dataTable.table-striped>tbody>tr.even>* {
-    text-align: center !important;
+table.dataTable.table-striped > tbody > tr.even > * {
+  text-align: center !important;
 }
-table.dataTable thead th, table.dataTable thead td, table.dataTable tfoot th, table.dataTable tfoot td {
-    text-align: center !important;
+table.dataTable thead th,
+table.dataTable thead td,
+table.dataTable tfoot th,
+table.dataTable tfoot td {
+  text-align: center !important;
 }
 .social-icons {
   display: inline-flex;
@@ -571,16 +575,74 @@ table.dataTable thead th, table.dataTable thead td, table.dataTable tfoot th, ta
   transition: 0.3s ease;
 }
 
-.icon.youtube { background-color: #FF0000; }
-.icon.twitter { background-color: #1DA1F2; }
-.icon.instagram { background-color: #E1306C; }
-.icon.facebook { background-color: #1877F2; }
-.icon.whatsapp { background-color: #25D366; }
+.icon.youtube {
+  background-color: #ff0000;
+}
+.icon.twitter {
+  background-color: #1da1f2;
+}
+.icon.instagram {
+  background-color: #e1306c;
+}
+.icon.facebook {
+  background-color: #1877f2;
+}
+.icon.whatsapp {
+  background-color: #25d366;
+}
 
 .icon:hover {
   transform: scale(1.1);
 }
-.form-profile{
-  background: #FCFCFC;
+.form-profile {
+  background: #fcfcfc;
+}
+.coupon-section {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #00000010;
+  margin-top: 30px;
+  background:#FAFAFA;
+}
+
+.coupon-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.coupon-sub {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.coupon-discount {
+  font-size: 20px;
+  color: #00956f;
+  font-weight: bold;
+}
+
+.coupon-label {
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.coupon-value {
+  font-size: 16px;
+}
+
+.table-details-coupon td {
+  border: none;
+  padding: 12px 0;
+}
+
+.table-details-coupon  td {
+  background:#FAFAFA;
+}
+.table-details-coupon tr:not(:last-child) td {
+  border-bottom: 1px solid #eee;
+}
+.table-details-coupon{
+  direction: ltr;
 }
 /* End pages */
